@@ -1,0 +1,34 @@
+#include <iostream>
+#include<set>
+using namespace std;
+bool search(char x,char arr[])
+{
+    int l=sizeof(arr)/sizeof(arr[0]);
+    for(int i=0;i<l;i++)
+    {
+        if(x==arr[i])
+        return true;
+    }
+    return false;
+}
+int main() {
+	int t;
+	cin>>t;
+	for(int i=0;i<t;i++)
+	{
+	    int n,g=0;
+	    cin>>n;
+	    string a,b;
+	    cin>>a>>b;
+	    set <char>s;
+	    for(int j=0;j<n;j++)
+	    {
+	        if(a[j]==b[j])
+	        continue;
+	        else
+	        s.insert(b[j]);
+	    }
+	    cout<<s.size()<<endl;
+	}
+	return 0;
+}
